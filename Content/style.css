@@ -1,0 +1,87 @@
+﻿@font-face {
+   font-family: 'SMB';
+   src: local('Super Mario Bros.'),
+        url('fonts/Super Mario Bros.ttf') format('truetype');
+   font-style: normal;
+}
+
+#game {
+	height: 480px; width: 640px; position: absolute; left: 50%; top: 50%;
+	margin-left: -300px; margin-top: 100px; border: 1px solid #cccccc; overflow: hidden;
+}
+#world { 
+	margin: 0; padding: 0; height: 100%; width: 100%; position: absolute;
+	bottom: 0; left: 0; z-index: 0;
+}
+.gauge {
+	margin: 0; padding: 0; height: 50px; width: 70px; text-align: right; font-size: 2em;
+	font-weight: bold; position: absolute; top: 17px; right: 52px; z-index: 1000;
+	position: absolute; font-family: 'SMB';
+}
+.gaugeSprite {
+	margin: 0; padding: 0; z-index: 1000; position: absolute;
+}
+#coinNumber {
+	left: 0;
+}
+#liveNumber {
+	right: 52px;
+}
+#coin {
+	height: 32px; width: 32px; background-image : url(mario-objects.png);
+	background-position: 0 0; top: 15px; left: 70px;
+}
+#live {
+	height: 40px; width: 40px; background-image : url(mario-sprites.png);
+	background-position : 0 -430px; top: 12px; right: 8px;
+}
+.figure {
+	margin: 0; padding: 0; z-index: 99; position: absolute;
+}
+.matter {
+	margin: 0; padding: 0; z-index: 95; position: absolute; width: 32px; height: 32px;
+}
+
+body {
+	background-color: #800080;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+  }
+  
+  .sparkle {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: white;
+	border-radius: 1%;
+	opacity: 0.8;
+	animation: sparkle 2s infinite ease-in-out;
+  }
+  
+  @keyframes sparkle {
+	0% {
+	  transform: translateY(0) scale(1);
+	  opacity: 0.8;
+	}
+	50% {
+	  transform: translateY(-20px) scale(1.5);
+	  opacity: 1;
+	}
+	100% {
+	  transform: translateY(0) scale(1);
+	  opacity: 0.3;
+	}
+  }
+  
+  .title {
+    position: absolute;
+    top: calc(50% + 650px); /* 50% of screen + half height of game + margin */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+  }
+  
